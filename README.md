@@ -1,7 +1,7 @@
 # Quote Farm
 
-#### JT Black & Marco Manunta
-_Quote Farm_ is a fun app that allows a user to choose an animal and get a video and related quote about that animal. It was my second project while attending General Assembly's Software Intensive Engineering course. The project, a mobile-first, React-powered single-page app, was a team effort with another member of the SEI62 cohort, [Marco Manunta](https://github.com/frozenborder72), and was built over 2 days.
+### JT Black & Marco Manunta
+_Quote Farm_ is a fun app that allows a user to choose an animal and get a video and related quote about that animal. It was my second project while attending General Assembly's Software Intensive Engineering course. _Quote Farm_ is a mobile-first, React-powered single-page app. It was a team effort with another member of the SEI62 cohort, [Marco Manunta](https://github.com/frozenborder72), and was built over 2 days.
 
 
 ## Planning & Wireframe
@@ -65,10 +65,10 @@ We opened up the code on Friday morning, had a big coffee, and were ready to sub
 ```
 
 ```
-##Challenges
+## Challenges
 The Cross Origin Resource security issue caused us headaches for about half a day. We also had issues trying to use multiple sounds at once.
-##Wins
+## Wins
 We were happy that most of the stuff worked right away. When we got the proxy server solution to our CORS issue we were happy and ready to deliver MVP.
-##Future Features
+## Future Features
 We wanted to add the choice of selecting either an image or a video. Adding more sounds.
 
