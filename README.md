@@ -62,7 +62,63 @@ Day 2 we spent several hours dealing with the learning curve of Bulma syntax, an
 We opened up the code on Friday morning, had a big coffee, and were ready to submit before lunch!
 
 ## Code Snippets
+Here's the code for the animals search component.
 ```
+const Animals = () => {
+  const [searchTerm, setSearchTerm] = useState(null);
+  const [animalPhotos, setAnimalPhotos] = useState(null);
+
+  const audio = new Audio(sounds[searchTerm]);
+
+  useEffect(() => {
+    searchTerm &&
+      getAnimals(searchTerm).then(({ data }) => setAnimalPhotos(data.videos));
+  }, [searchTerm]);
+
+  const handleChange = e => {
+    setSearchTerm(e.target.value);
+  };
+
+  const playAudio = () => audio.play();
+
+  return (
+    <>
+      <div className='select is-rounded is-medium '>
+        <select
+          className='select has-text-white has-background-dark'
+          name='animal'
+          onChange={handleChange}
+        >
+          <option>Select an animal</option>
+          <option value='dogs'>Dogs</option>
+          <option value='cats'>Cats</option>
+          <option value='birds'>Birds</option>
+          <option value='fish'>Fish</option>
+          <option value='horses'>Horses</option>
+          <option value='pigs'>Pigs</option>
+        </select>
+      </div>
+
+      <section className='section section-home'>
+        {!animalPhotos ? (
+          <div className='image-container'>
+            <img src={farm} alt='' />
+          </div>
+        ) : (
+          <div className='masonry-container'>
+            <Masonry columns={{ xs: 1, sm: 2 }} spacing={2}>
+              {animalPhotos.map(photo => (
+                <Link key={photo.id} to={`/single/${photo.id}/${searchTerm}`}>
+                  <img src={photo.image} alt={photo.alt} onClick={playAudio} />
+                </Link>
+              ))}
+            </Masonry>
+          </div>
+        )}
+      </section>
+    </>
+  );
+};
 
 ```
 ## Challenges
