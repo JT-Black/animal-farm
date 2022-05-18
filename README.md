@@ -35,7 +35,9 @@ We used Excalidraw to wireframe the app, write some psuedo-code, and plan the us
 - HTML 
 - CSS/SASS 
 - JavaScript 
-- React 
+- React
+- Bulma
+- Masonry
 
 ### Deployed App:
 Try [Quote Farm](https://quote-farm.netlify.app/)
@@ -50,15 +52,15 @@ Our brief was to create a web app that:
 
 ## Day 1
 
-We started by looking for some interesting APIs, and after some investigation we discovered that many APIs would have issues with CORS, registration, paying, call-limits, and availability. We decided to use two APIs - one for supplying cute animal videos and another for supplying quotes . We wanted the user to select an animal, and then we would return a selection of videos of that animal and a random quote that was associated with the chosen animal. We added a little easter egg - an animal noise generated when the video field was clicked on.
+We started by looking for some interesting APIs, and after some investigation we discovered that many APIs would have issues with CORS, registration, paying, call-limits, and availability. We decided to use two APIs - one for supplying cute animal videos and another for supplying quotes. We wanted the user to select an animal, and then we would return a selection of videos of that animal and a random quote that was associated with the chosen animal. We added a little easter egg - an animal noise generated when the video field was clicked on.
 
-We jumped into building the logic for returning the animal videos. There was a CORS issue of course, and we were on the verge of giving up and just using pics when we received the suggestion to try a proxy server. Once that was implemented we were able to return the videos.
+We jumped into building the logic for returning the animal videos. There was a CORS issue with the animal videos API, and we were on the verge of giving up and just using pics when we received the suggestion to try a proxy server. We used some commands in the terminal to spin up and push our proxy server to Heroku. Once that was implemented, we were able to sucessfully return the videos.
 
-The next thing was to return a quote that contained the animal. We went to a second API for that and returned a random animal-associated quote in the video window when the user clicked on the video thumbnail. We added the easter egg sounds.
+The next thing was to return a quote that contained the animal. We went to a second API for that and returned a random animal-associated quote in the video window when the user clicked on the video thumbnail. Finally, we added the easter egg sounds.
 
 ## Day 2
 
-Day 2 we spent several hours dealing with the learning curve of Bulma syntax, and got most of the styling sorted. We added a masonry library to make the thumbnails look nicer, as they were all different random sizes and rather than returning images based on proportions we thought it best to constrain them in thumbnail screen.
+We spent several hours dealing with the learning curve of Bulma and using the library's classes correctly, and got most of the styling sorted. We added a small library, Masonry.js, to make the thumbnails look nicer, as they were all different and random sizes. Rather than returning images based on proportions we thought it best to constrain them in the thumbnail screen.
 We opened up the code on Friday morning, had a big coffee, and were ready to submit before lunch!
 
 ## Code Snippets
